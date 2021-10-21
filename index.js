@@ -8,7 +8,7 @@ const newspapers = [
     {
         name: 'wwe',
         address: 'https://www.wwe.com/news/',
-        base: ''
+        base: 'https://www.wwe.com/'
     }/*,
    {
         name: 'thetimes',
@@ -115,7 +115,7 @@ app.get('/news/:newspaperId', (req, res) => {
             const $ = cheerio.load(html)
             const specificArticles = []
 
-            $('a:contains("WWE Crown Jewel")', html).each(function () {
+            $('a:contains("crown-jewel")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
                 specificArticles.push({
