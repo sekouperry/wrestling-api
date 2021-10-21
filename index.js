@@ -6,9 +6,9 @@ const app = express()
 
 const newspapers = [
     {
-        name: 'wwe',
-        address: 'https://www.wwe.com/news/',
-        base: 'https://www.wwe.com/'
+        name: 'bleacherreport',
+        address: 'https://bleacherreport.com/wwe',
+        base: 'https://bleacherreport.com/'
     }/*,
    {
         name: 'thetimes',
@@ -80,7 +80,7 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("wwe")', html).each(function () {
+            $('a:contains("crown-jewel")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -115,7 +115,7 @@ app.get('/news/:newspaperId', (req, res) => {
             const $ = cheerio.load(html)
             const specificArticles = []
 
-            $('a:contains("wwe")', html).each(function () {
+            $('a:contains("crown-jewel")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
                 specificArticles.push({
