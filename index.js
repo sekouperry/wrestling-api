@@ -11,9 +11,9 @@ const newspapers = [
         base: ''
     },
     {
-        name: 'sports illustrated',
-        address: 'https://www.wrestlinginc.com/wrestling-injured-list/',
-        base: 'https://www.wrestlinginc.com/wrestling-injured-list/'
+        name: 'wrestlinginc',
+        address: 'https://www.wrestlinginc.com/news/',
+        base: 'https://www.wrestlinginc.com/news/'
     },
     {
         name: 'thetimes',
@@ -85,7 +85,7 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("profiles")', html).each(function () {
+            $('a:contains("aew")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -120,7 +120,7 @@ app.get('/news/:newspaperId', (req, res) => {
             const $ = cheerio.load(html)
             const specificArticles = []
 
-            $('a:contains("profiles")', html).each(function () {
+            $('a:contains("aew")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
                 specificArticles.push({
