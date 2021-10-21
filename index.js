@@ -6,9 +6,9 @@ const app = express()
 
 const newspapers = [
     {
-        name: 'www',
-        address: 'https://www.wwe.com/shows/wwe-crown-jewel',
-        base: 'https://wwe.com/'
+        name: 'sports illustrated',
+        address: 'https://www.si.com/wrestling',
+        base: 'https://www.si.com'
     },
    {
         name: 'thetimes',
