@@ -9,7 +9,7 @@ const newspapers = [
         name: 'bleacherreport',
         address: 'https://bleacherreport.com/wwe',
         base: 'https://bleacherreport.com/'
-    } /*,
+    },
    {
         name: 'thetimes',
         address: 'https://www.thetimes.co.uk/environment/climate-change',
@@ -69,7 +69,7 @@ const newspapers = [
         name: 'nyp',
         address: 'https://nypost.com/tag/climate-change/',
         base: ''
-    } */
+    }
 ]
 
 const articles = []
