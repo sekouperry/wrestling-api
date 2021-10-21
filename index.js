@@ -85,7 +85,7 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("CROWN")', html).each(function () {
+            $('a:contains("Crown")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -120,7 +120,7 @@ app.get('/news/:newspaperId', (req, res) => {
             const $ = cheerio.load(html)
             const specificArticles = []
 
-            $('a:contains("CROWN")', html).each(function () {
+            $('a:contains("Crown")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
                 specificArticles.push({
