@@ -80,7 +80,7 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("WWE Crown Jewel")', html).each(function () {
+            $('a:contains("crown-jewel")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
