@@ -6,11 +6,11 @@ const app = express()
 
 const newspapers = [
     {
-        name: 'cityam',
-        address: 'https://www.cityam.com/london-must-become-a-world-leader-on-climate-change-action/',
+        name: 'wwe',
+        address: 'https://www.wwe.com/news/',
         base: ''
-    },
-    {
+    }/*,
+   {
         name: 'thetimes',
         address: 'https://www.thetimes.co.uk/environment/climate-change',
         base: ''
@@ -69,7 +69,7 @@ const newspapers = [
         name: 'nyp',
         address: 'https://nypost.com/tag/climate-change/',
         base: ''
-    }
+    } */
 ]
 
 const articles = []
@@ -80,7 +80,7 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("climate")', html).each(function () {
+            $('a:contains("WWE Crown Jewel")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -95,7 +95,7 @@ newspapers.forEach(newspaper => {
 })
 
 app.get('/', (req, res) => {
-    res.json('Welcome to my Climate Change News API')
+    res.json('Welcome to my Wrestling News API')
 })
 
 app.get('/news', (req, res) => {
@@ -115,7 +115,7 @@ app.get('/news/:newspaperId', (req, res) => {
             const $ = cheerio.load(html)
             const specificArticles = []
 
-            $('a:contains("climate")', html).each(function () {
+            $('a:contains("WWE Crown Jewel")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
                 specificArticles.push({
