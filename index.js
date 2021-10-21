@@ -12,8 +12,8 @@ const newspapers = [
     },
     {
         name: 'wrestlinginc',
-        address: 'https://wrestlinginc.com/news/',
-        base: 'https://wrestlinginc.com/news/'
+        address: 'https://www.wrestlinginc.com/news/',
+        base: 'https://www.wrestlinginc.com/news/'
     },
     {
         name: 'thetimes',
