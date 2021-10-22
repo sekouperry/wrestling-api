@@ -28,7 +28,7 @@ const newspapers = [
     {
         name: 'ewrestling news',
         address: 'https://www.ewrestlingnews.com/latest/news?filter=wwe',
-        base: 'https://www.ewrestlingnews.com/latest/news?filter=wwe',
+        base: '',
     }/*,
     {
         name: 'nyt',
