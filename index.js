@@ -88,13 +88,11 @@ newspapers.forEach(newspaper => {
             $('a:contains("Crown")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
-                const a = $(this)
 
                 articles.push({
                     title,
                     url: newspaper.base + url,
-                    source: newspaper.name,
-                    image: a.find('.entry-thumb').find('img').attr('src')
+                    source: newspaper.name
                 })
             })
 
@@ -125,12 +123,10 @@ app.get('/news/:newspaperId', (req, res) => {
             $('a:contains("Crown")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
-                const a = $(this)
                 specificArticles.push({
                     title,
                     url: newspaperBase + url,
-                    source: newspaperId,
-                    image: a.find('.entry-thumb').find('img').attr('src')
+                    source: newspaperId
                 })
             })
             res.json(specificArticles)
