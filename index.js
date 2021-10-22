@@ -31,11 +31,6 @@ const newspapers = [
         base: '',
     },
     {
-        name: 'cbs sports',
-        address: 'https://www.cbssports.com/',
-        base: 'https://www.cbssports.com/',
-    },
-    {
         name: 'bleacherreport',
         address: 'https://bleacherreport.com/wwe',
         base: '',
