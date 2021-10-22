@@ -33,7 +33,7 @@ const newspapers = [
     {
         name: 'cbs sports',
         address: 'https://www.cbssports.com/wwe/news/2021-wwe-draft-results-smackdown-and-raw-rosters-picks-all-undrafted-superstars/',
-        base: '',
+        base: 'https://www.cbssports.com/wwe/news/2021-wwe-draft-results-smackdown-and-raw-rosters-picks-all-undrafted-superstars/',
     },
     {
         name: 'bleacherreport',
