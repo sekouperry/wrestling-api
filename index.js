@@ -88,11 +88,13 @@ newspapers.forEach(newspaper => {
             $('a:contains("Crown")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
+                a = $(this)
 
                 articles.push({
                     title,
                     url: newspaper.base + url,
-                    source: newspaper.name
+                    source: newspaper.name,
+                    image: a.find('.entry-thumb').find('img').attr('src')
                 })
             })
 
