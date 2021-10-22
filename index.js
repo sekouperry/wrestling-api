@@ -29,12 +29,12 @@ const newspapers = [
         name: 'ewrestling news',
         address: 'https://www.ewrestlingnews.com/latest/news?filter=wwe',
         base: '',
-    }/*,
-    {
-        name: 'nyt',
-        address: 'https://www.nytimes.com/international/section/climate',
-        base: '',
     },
+    {
+        name: 'youtube',
+        address: 'https://www.youtube.com/results?search_query=crown+jewel',
+        base: 'https://www.youtube.com/results?search_query=crown+jewel',
+    }/*,
     {
         name: 'latimes',
         address: 'https://www.latimes.com/environment',
