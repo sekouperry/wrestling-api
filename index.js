@@ -29,7 +29,6 @@ const newspapers = [
         name: 'ewrestling news',
         address: 'https://www.ewrestlingnews.com/latest/news?filter=wwe',
         base: '',
-        class: 'td-module-thumb',
     }/*,
     {
         name: 'nyt',
@@ -89,14 +88,11 @@ newspapers.forEach(newspaper => {
             $('a:contains("Crown")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
-                const imageAttr = $class.attr()
-                const imageUrl = (imageAttr === undefined) ? null : imageAttr.src
 
                 articles.push({
                     title,
                     url: newspaper.base + url,
-                    source: newspaper.name,
-                    image: newspaper.base + imageUrl,
+                    source: newspaper.name
                 })
             })
 
