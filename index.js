@@ -31,15 +31,15 @@ const newspapers = [
         base: '',
     },
     {
-        name: 'youtube',
-        address: 'https://www.youtube.com/results?search_query=crown+jewel',
-        base: 'https://www.youtube.com/results?search_query=crown+jewel',
-    }/*,
-    {
-        name: 'latimes',
-        address: 'https://www.latimes.com/environment',
+        name: 'cbs sports',
+        address: 'https://www.cbssports.com/wwe/news/2021-wwe-draft-results-smackdown-and-raw-rosters-picks-all-undrafted-superstars/',
         base: '',
     },
+    {
+        name: 'bleacherreport',
+        address: 'https://bleacherreport.com/wwe',
+        base: '',
+    }/*,
     {
         name: 'smh',
         address: 'https://www.smh.com.au/environment/climate-change',
