@@ -88,7 +88,7 @@ newspapers.forEach(newspaper => {
             $('a:contains("Crown")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
-                a = $(this)
+                const a = $(this)
 
                 articles.push({
                     title,
