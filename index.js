@@ -14,22 +14,22 @@ const newspapers = [
         name: 'wrestling inc',
         address: 'https://www.wrestlinginc.com/news/',
         base: 'https://www.wrestlinginc.com/news/'
+    },
+    {
+        name: 'wwe',
+        address: 'https://www.wwe.com/shows/wwe-crown-jewel',
+        base: 'https://www.wwe.com/shows/wwe-crown-jewel'
+    },
+    {
+        name: 'wrestling headlines',
+        address: 'https://wrestlingheadlines.com/news/wwe-news/',
+        base: 'https://wrestlingheadlines.com/news/wwe-news/',
+    },
+    {
+        name: 'ewrestling news',
+        address: 'https://www.ewrestlingnews.com/latest/news?filter=wwe',
+        base: 'https://www.ewrestlingnews.com/latest/news?filter=wwe',
     }/*,
-    {
-        name: 'thetimes',
-        address: 'https://www.thetimes.co.uk/environment/climate-change',
-        base: ''
-    },
-    {
-        name: 'guardian',
-        address: 'https://www.theguardian.com/environment/climate-crisis',
-        base: '',
-    },
-    {
-        name: 'telegraph',
-        address: 'https://www.telegraph.co.uk/climate-change',
-        base: 'https://www.telegraph.co.uk',
-    },
     {
         name: 'nyt',
         address: 'https://www.nytimes.com/international/section/climate',
