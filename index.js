@@ -23,7 +23,7 @@ const newspapers = [
     {
         name: 'wrestling headlines',
         address: 'https://wrestlingheadlines.com/news/wwe-news/',
-        base: 'https://wrestlingheadlines.com/news/wwe-news/',
+        base: '',
     },
     {
         name: 'ewrestling news',
