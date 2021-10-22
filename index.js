@@ -13,7 +13,7 @@ const newspapers = [
     {
         name: 'wrestling inc',
         address: 'https://www.wrestlinginc.com/news/',
-        base: 'https://www.wrestlinginc.com/news/'
+        base: ''
     },
     {
         name: 'wwe',
