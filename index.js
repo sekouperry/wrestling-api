@@ -125,10 +125,12 @@ app.get('/news/:newspaperId', (req, res) => {
             $('a:contains("Crown")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
+                const a = $(this)
                 specificArticles.push({
                     title,
                     url: newspaperBase + url,
-                    source: newspaperId
+                    source: newspaperId,
+                    image: a.find('.entry-thumb').find('img').attr('src')
                 })
             })
             res.json(specificArticles)
