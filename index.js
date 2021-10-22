@@ -6,15 +6,15 @@ const app = express()
 
 const newspapers = [
     {
-        name: 'cityam',
-        address: 'https://www.cityam.com/london-must-become-a-world-leader-on-climate-change-action/',
-        base: ''
+        name: 'sports illustrated',
+        address: 'https://www.si.com/wrestling',
+        base: 'https://www.si.com/wrestling'
     },
     {
-        name: 'wrestlinginc',
+        name: 'wrestling inc',
         address: 'https://www.wrestlinginc.com/news/',
         base: 'https://www.wrestlinginc.com/news/'
-    },
+    }/*,
     {
         name: 'thetimes',
         address: 'https://www.thetimes.co.uk/environment/climate-change',
@@ -74,7 +74,7 @@ const newspapers = [
         name: 'nyp',
         address: 'https://nypost.com/tag/climate-change/',
         base: ''
-    }
+    }*/
 ]
 
 const articles = []
