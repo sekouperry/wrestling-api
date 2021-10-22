@@ -8,17 +8,17 @@ const newspapers = [
     {
         name: 'sports illustrated',
         address: 'https://www.si.com/wrestling',
-        base: 'https://www.si.com/wrestling'
+        base: 'https://www.si.com/',
     },
     {
         name: 'wrestling inc',
         address: 'https://www.wrestlinginc.com/news/',
-        base: ''
+        base: '',
     },
     {
         name: 'wwe',
         address: 'https://www.wwe.com/shows/wwe-crown-jewel',
-        base: 'https://www.wwe.com/shows/wwe-crown-jewel'
+        base: 'https://www.wwe.com/shows/wwe-crown-jewel',
     },
     {
         name: 'wrestling headlines',
@@ -37,7 +37,7 @@ const newspapers = [
     {
         name: 'bleacherreport',
         address: 'https://bleacherreport.com/wwe',
-        base: '',
+        base: ''
     }/*,
     {
         name: 'smh',
