@@ -34,27 +34,27 @@ const newspapers = [
         name: 'bleacherreport',
         address: 'https://bleacherreport.com/wwe',
         base: '',
+    },
+    {
+        name: 'wrestling news',
+        address: 'https://wrestlingnews.co/',
+        base: 'https://wrestlingnews.co/',
+    },
+    {
+        name: 'wrestling news source',
+        address: 'https://www.wrestlingnewssource.com/',
+        base: 'https://www.wrestlingnewssource.com/',
+    },
+    {
+        name: 'mandatory',
+        address: 'https://www.mandatory.com/wrestlezone/',
+        base: 'https://www.mandatory.com/wrestlezone/',
+    },
+    {
+        name: 'ringside news',
+        address: 'https://www.ringsidenews.com/',
+        base: 'https://www.ringsidenews.com/'
     }/*,
-    {
-        name: 'smh',
-        address: 'https://www.smh.com.au/environment/climate-change',
-        base: 'https://www.smh.com.au',
-    },
-    {
-        name: 'un',
-        address: 'https://www.un.org/climatechange',
-        base: '',
-    },
-    {
-        name: 'bbc',
-        address: 'https://www.bbc.co.uk/news/science_and_environment',
-        base: 'https://www.bbc.co.uk',
-    },
-    {
-        name: 'es',
-        address: 'https://www.standard.co.uk/topic/climate-change',
-        base: 'https://www.standard.co.uk'
-    },
     {
         name: 'sun',
         address: 'https://www.thesun.co.uk/topic/climate-change-environment/',
@@ -80,7 +80,7 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("AEW")', html).each(function () {
+            $('a:contains("Charlotte Flair")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -91,7 +91,7 @@ newspapers.forEach(newspaper => {
                 })
             }),
 
-            $('a:contains("Raw")', html).each(function () {
+            $('a:contains("Paul Heyman")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -102,7 +102,40 @@ newspapers.forEach(newspaper => {
                 })
             }),
 
-            $('a:contains("SmackDown")', html).each(function () {
+            $('a:contains("Brock Lesnar")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("Bound For Glory")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("Carmella")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("Lex Luger")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
