@@ -80,7 +80,7 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("Crown, Raw, SmackDown, AEW")', html).each(function () {
+            $('a:contains("AEW")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -89,9 +89,9 @@ newspapers.forEach(newspaper => {
                     url: newspaper.base + url,
                     source: newspaper.name
                 })
-            })
+            }),
 
-            /*$('a:contains("Raw")', html).each(function () {
+            $('a:contains("Raw")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -111,7 +111,7 @@ newspapers.forEach(newspaper => {
                     url: newspaper.base + url,
                     source: newspaper.name
                 })
-            })*/
+            })
 
         })
 })
