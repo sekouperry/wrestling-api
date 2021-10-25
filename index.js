@@ -17,8 +17,8 @@ const newspapers = [
     },
     {
         name: 'wwe',
-        address: 'https://www.wwe.com/shows/wwe-crown-jewel',
-        base: 'https://www.wwe.com/shows/wwe-crown-jewel',
+        address: 'https://www.wwe.com/news/',
+        base: 'https://www.wwe.com/news/',
     },
     {
         name: 'wrestling headlines',
@@ -80,7 +80,29 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("Crown")', html).each(function () {
+            $('a:contains("Crown, Raw, SmackDown, AEW")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("Raw")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("SmackDown")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
