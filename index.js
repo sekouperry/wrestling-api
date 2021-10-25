@@ -170,13 +170,69 @@ app.get('/news/:newspaperId', (req, res) => {
             const $ = cheerio.load(html)
             const specificArticles = []
 
-            $('a:contains("Crown")', html).each(function () {
+            $('a:contains("Charlotte Flair")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
-                specificArticles.push({
+
+                articles.push({
                     title,
-                    url: newspaperBase + url,
-                    source: newspaperId
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("Paul Heyman")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("Brock Lesnar")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("Bound For Glory")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("Carmella")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
+                })
+            }),
+
+            $('a:contains("Lex Luger")', html).each(function () {
+                const title = $(this).text()
+                const url = $(this).attr('href')
+
+                articles.push({
+                    title,
+                    url: newspaper.base + url,
+                    source: newspaper.name
                 })
             })
             res.json(specificArticles)
