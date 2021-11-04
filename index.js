@@ -80,7 +80,7 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("Charlotte Flair")', html).each(function () {
+            $('a:contains("Roman Reigns")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -91,7 +91,7 @@ newspapers.forEach(newspaper => {
                 })
             }),
 
-            $('a:contains("Paul Heyman")', html).each(function () {
+            $('a:contains("Bray Wyatt")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -113,7 +113,7 @@ newspapers.forEach(newspaper => {
                 })
             }),
 
-            $('a:contains("Bound For Glory")', html).each(function () {
+            $('a:contains("Daniel Bryan")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -124,7 +124,7 @@ newspapers.forEach(newspaper => {
                 })
             }),
 
-            $('a:contains("Carmella")', html).each(function () {
+            $('a:contains("Seth Rollins")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -135,7 +135,7 @@ newspapers.forEach(newspaper => {
                 })
             }),
 
-            $('a:contains("Lex Luger")', html).each(function () {
+            $('a:contains("Braun Strowman")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -170,7 +170,7 @@ app.get('/news/:newspaperId', (req, res) => {
             const $ = cheerio.load(html)
             const specificArticles = []
 
-            $('a:contains("Charlotte Flair")', html).each(function () {
+            $('a:contains("Roman Reigns")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -181,7 +181,7 @@ app.get('/news/:newspaperId', (req, res) => {
                 })
             }),
 
-            $('a:contains("Paul Heyman")', html).each(function () {
+            $('a:contains("Bray Wyatt")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -203,7 +203,7 @@ app.get('/news/:newspaperId', (req, res) => {
                 })
             }),
 
-            $('a:contains("Bound For Glory")', html).each(function () {
+            $('a:contains("Daniel Bryan")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -214,7 +214,7 @@ app.get('/news/:newspaperId', (req, res) => {
                 })
             }),
 
-            $('a:contains("Carmella")', html).each(function () {
+            $('a:contains("Seth Rollins")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -225,7 +225,7 @@ app.get('/news/:newspaperId', (req, res) => {
                 })
             }),
 
-            $('a:contains("Lex Luger")', html).each(function () {
+            $('a:contains("Braun Strowman")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
