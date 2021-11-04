@@ -1,17 +1,24 @@
 {
-  "name": "climate-change-api",
+  "name": "wrestling-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "You can run this project on your local machine. Just pull it down and do the following:",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ania kubow",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sekouperry/wrestling-api.git"
+  },
+  "author": "Sekou Perry",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sekouperry/wrestling-api/issues"
+  },
+  "homepage": "https://github.com/sekouperry/wrestling-api#readme",
   "dependencies": {
-    "axios": "^0.21.4",
+    "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.13"
+    "express": "^4.17.1"
   }
 }

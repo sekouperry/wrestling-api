@@ -1,5 +1,4 @@
-# climate-change-live-api
-A Demo to show how to build your own API and host in on RapidAPI
+# wrestling-api
 
 ## To run this project
 
@@ -17,7 +16,7 @@ You can run this project on your local machine. Just pull it down and do the fol
 npm run start
 ```
 
-3. Open [http://localhost:8000/news](http://localhost:8000/news) with your browser to see the results of the scrape in your terminal. You can also used certain paramters to get news from individual sources.
+3. Open [http://localhost:8000/news](http://localhost:8000/news) with your browser to see the results of the scrape in your terminal.
 
 
 
