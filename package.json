@@ -4,7 +4,7 @@
   "description": "You can run this project on your local machine. Just pull it down and do the following:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
