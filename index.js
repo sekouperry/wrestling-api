@@ -80,62 +80,7 @@ newspapers.forEach(newspaper => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('a:contains("Roman Reigns")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Bray Wyatt")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Brock Lesnar")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Daniel Bryan")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Seth Rollins")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Braun Strowman")', html).each(function () {
+            $('a:contains("Roman Reigns"), a:contains("Bray Wyatt"), a:contains("Brock Lesnar")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -170,62 +115,7 @@ app.get('/news/:newspaperId', (req, res) => {
             const $ = cheerio.load(html)
             const specificArticles = []
 
-            $('a:contains("Roman Reigns")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Bray Wyatt")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Brock Lesnar")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Daniel Bryan")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Seth Rollins")', html).each(function () {
-                const title = $(this).text()
-                const url = $(this).attr('href')
-
-                articles.push({
-                    title,
-                    url: newspaper.base + url,
-                    source: newspaper.name
-                })
-            }),
-
-            $('a:contains("Braun Strowman")', html).each(function () {
+            $('a:contains("Roman Reigns"), a:contains("Bray Wyatt"), a:contains("Brock Lesnar")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
 
@@ -235,6 +125,8 @@ app.get('/news/:newspaperId', (req, res) => {
                     source: newspaper.name
                 })
             })
+
+           
             res.json(specificArticles)
         }).catch(err => console.log(err))
 })
